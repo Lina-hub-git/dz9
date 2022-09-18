@@ -52,14 +52,38 @@
 
 // третья задача
 
-Console.WriteLine("Введите число");
-int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int a = Convert.ToInt32(Console.ReadLine());
 
-if (a%2==0)
+// if (a%2==0)
+// {
+//     Console.WriteLine("число   " + a + " четное");
+// }
+// else
+// {
+//     Console.WriteLine("число   " + a + " нечетное");
+// }
+
+
+
+
+
+// Четвертая задача
+
+
+Console.WriteLine("Введите положительное число N");
+int N = Convert.ToInt32(Console.ReadLine());
+int a=1;
+while (a<=N)
 {
-    Console.WriteLine("число   " + a + " четное");
+    if (a%2==0)
+    {
+        Console.WriteLine(a);
+        a++;
+    }
+    else
+    {
+        a++;
+    }
 }
-else
-{
-    Console.WriteLine("число   " + a + " нечетное");
-}
+

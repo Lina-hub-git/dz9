@@ -1,31 +1,41 @@
 ﻿void Zadacha1()
 {
 Console.WriteLine("Введите число A");
-int A = Convert.ToInt32(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B");
-int B = Convert.ToInt32(Console.ReadLine());
-
+int b = Convert.ToInt32(Console.ReadLine());
 int i=1; 
-double t=A;
-
-while (i<B)
+int temp=a;
+while (i<b)
 {
-    double t = t*A;
-    Console.WriteLine(t);
-    i=i+1;
+temp = temp*a;
+i=i+1;
+}
+Console.WriteLine("A в степени B равно: " + temp);
 }
 
 
+void Zadacha2()
+{
+
+
+Console.WriteLine("Введите  число");
+int num = Convert.ToInt32(Console.ReadLine());
+int current_num = num;
+int i=1; 
+int S=0;
+while (current_num>0)
+{
+int t=current_num%10;
+S=S+t;
+current_num=current_num/10;
+i++;
 }
+Console.WriteLine($"Сумма числа {num} равна: " + S);
 
 
 
-
-
-
-
-
-Zadacha1();
+Zadacha2();
 
 
 

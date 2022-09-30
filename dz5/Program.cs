@@ -81,17 +81,36 @@ void Zadacha3()
 {
 int size=5;    
 double[] array=new double[size];
-FillaArray(array);
-PrintArray(array);
+FillaaArray(array);
+PrintaArray(array);
 Console.WriteLine();
 double min=Razniza(array);
 double max=Razniza(array);
 double R=Razniza(array);
-Console.WriteLine("разница между макс и мин = " + R);
+Console.WriteLine("разница между макс и мин = " + Math.Round(R,2));
 
 }
 
-
+void FillaaArray(double[] collection)
+{
+    int l=collection.Length;
+    int i=0;
+    while (i<l)
+    {
+        collection[i]=new Random().NextDouble()*10;
+        i++;
+    }
+}
+void PrintaArray(double[] col)
+{
+    int d=col.Length;
+    int i=0;
+    while (i<d)
+    {
+        Console.Write(Math.Round(col[i],2) + "  ");
+        i++;
+    }
+}
 double Razniza(double[] numb)
 {
     double min=numb[0];  double max=0;

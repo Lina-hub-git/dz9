@@ -23,7 +23,22 @@ void FillaArray(int[] collection)
     }
 }
 
+void Zadacha2()
+{
+Console.WriteLine("задайте коэффициенты y = k1 * x + b1, y = k2 * x + b2");
+Console.WriteLine("Введите b1, k1");
+int b1 = Convert.ToInt32(Console.ReadLine());
+int k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите b2, k2");
+int b2 = Convert.ToInt32(Console.ReadLine());
+int k2 = Convert.ToInt32(Console.ReadLine());
+double x1=b2-b1;
+double x2=k1-k2;
+double x=x1/x2;
+double y=k1*x+b1;
 
+Console.WriteLine("точка пересечения двух прямых = (" + x + ", "+y+")");
+}
 
-Zadacha1();
+Zadacha2();
 

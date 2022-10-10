@@ -72,17 +72,14 @@ FillaArray(array);
 PrintaArray(array);
 int sum=0;
 double avg=0;
-
 for(int j=0; j<cols; j++)
-    {
-    for(int i=0; i<rows; i++)
+   {    sum=0;
+        for(int i=0; i<rows; i++)
         {
            sum=sum+array[i,j];
-           Console.Write(sum +"\t");
-           avg=Convert.ToDouble(sum/rows);
-            //Console.Write(avg+"\t");
+           avg=(Convert.ToDouble(sum))/(Convert.ToDouble(i+1));
         }
-       // Console.Write(Math.Round(avg,2) + "\t"); 
+        Console.Write(Math.Round(avg,2) + "\t");
     }     
 }
 
@@ -115,4 +112,5 @@ void PrintaArray(int[,] collection)
 }
 
 Zadacha3();
+
 

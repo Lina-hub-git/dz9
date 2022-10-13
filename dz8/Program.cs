@@ -1,27 +1,31 @@
 ﻿void Zadacha1()
 {
 Random random=new Random();
-int rows=random.Next(4,6);
-int cols=random.Next(4,6);
+int rows=random.Next(4,8);
+int cols=random.Next(4,8);
 int[,] array=new int[rows,cols];
 Console.WriteLine($"количество строк в массиве {rows}, количество столбцов {cols}");
 FillArray(array);
 PrintArray(array);
 
 int temp;
-int[] d=new int[cols];
 for(int i=0; i<rows; i++)
-   {  
+   {   
         for(int j=0; j<cols; j++) 
         {
-          // SelectionSort(d[array[i,j]]);
-            
+            for (int k=j+1; k<cols; k++)
+                if (array[i,j]<array[i,k])
+                {
+                    temp=array[i,j];
+                    array[i,j]=array[i,k];
+                    array[i,k]=temp;
+                }
         }
-    } 
-    Console.WriteLine();
-//     PrintArray(array);     
-}
 
+    } 
+  Console.WriteLine($"упорядоченный массив по убыванию по строкам");
+  PrintArray(array);     
+}
 
 
 void FillArray(int[,] collection)
@@ -52,24 +56,6 @@ void PrintArray(int[,] collection)
 }
 
 
-void SelectionSort(int[] numb)
-{
-    for(int i=0; i<numb.Length-1; i++)
-    {
-        int min=i;
-        for(int j=i+1; j<numb.Length; j++)
-        {
-            if(numb[j]<numb[min])
-            {
-                min=j; 
-            }
-        }
-        int t=numb[i];
-        numb[i]=numb[min];
-        numb[min]=t;
-    }
-    Console.WriteLine(numb);
-}
 
 
 
